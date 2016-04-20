@@ -1,3 +1,2 @@
-name: FaiChou's Blog
 markdown: kramdown
 permalink: /notes/:year/:month/:day/:title
