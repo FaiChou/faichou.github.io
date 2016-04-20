@@ -4,13 +4,13 @@ layout: feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>Notes from Jonathan McGlone</title>
+ <title>Notes from FaiChou</title>
  <link href="http://faichou.space/notes/atom.xml" rel="self"/>
  <link href="http://faichou.space/notes/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://faichou.com/notes/</id>
  <author>
-   <name>Jonathan McGlone</name>
+   <name>FaiChou</name>
    <email>faichou.zh@gmail.com</email>
  </author>
 
