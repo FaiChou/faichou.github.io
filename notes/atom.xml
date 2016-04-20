@@ -8,7 +8,7 @@ layout: feed
  <link href="http://faichou.space/notes/atom.xml" rel="self"/>
  <link href="http://faichou.space/notes/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://faichou.github.io/notes/</id>
+ <id>http://faichou.space/notes/</id>
  <author>
    <name>FaiChou</name>
    <email>faichou.zh@gmail.com</email>
@@ -17,9 +17,9 @@ layout: feed
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://faichou.github.io{{ post.url }}"/>
+   <link href="http://faichou.space{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://faichou.github.io/{{ post.id }}</id>
+   <id>http://faichou.space/{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
