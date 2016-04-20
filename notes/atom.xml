@@ -19,7 +19,7 @@ layout: feed
    <title>{{ post.title }}</title>
    <link href="http://faichou.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://faichou.space/notes{{ post.id }}</id>
+   <id>http://faichou.github.io/{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
