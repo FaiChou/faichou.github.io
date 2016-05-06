@@ -1,4 +1,8 @@
-# Objective-C learning & relearning
+---
+layout: post
+title: "Objective-C learning & relearning"
+date: 2016-05-06
+---
 
 ### 代码风格
 
