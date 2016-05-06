@@ -207,8 +207,8 @@ typedef NS_OPTIONS(NSUInteger, UIViewAutoresizing) {
 - 宏
 
 
-　　创建一个import所有宏相关的文件Macros.h
-　　
+　　创建一个import所有宏相关的文件Macros.h  
+
 　　在xcode项目的pch文件中，导入Macros.h文件
 
 ```
