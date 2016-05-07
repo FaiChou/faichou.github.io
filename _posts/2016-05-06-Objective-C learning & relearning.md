@@ -357,12 +357,13 @@ XcodeProjectName-Prefix.pch
 
 
 
-### 堆栈，内存管理
+### 变量，堆栈，内存管理
 
 > 操作系统iOS 中应用程序使用的计算机内存不是统一分配空间，运行代码使用的空间在三个不同的内存区域，分成三个段：“text segment “，“stack segment ”，“heap segment ”。
 
 <br />
 
+- [静态变量&全局变量](http://www.jianshu.com/p/97857d5575fd)
 - [内存管理1](http://www.jianshu.com/p/3129ce12e020)
 - [内存管理2](https://gist.github.com/tedzhou/8899519)
 - [内存管理3](https://hit-alibaba.github.io/interview/iOS/ObjC-Basic/MM.html)
