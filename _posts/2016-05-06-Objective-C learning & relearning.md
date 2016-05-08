@@ -476,7 +476,7 @@ XcodeProjectName-Prefix.pch
 ### 同步异步GetPost网络
 
 - [网络](http://www.cnblogs.com/iCocos/p/4550267.html)
-
+- [**AF**](http://www.superqq.com/blog/2014/11/07/ioswang-luo-bian-cheng-zhi-afnetworkingshi-yong/)
 
 
 
