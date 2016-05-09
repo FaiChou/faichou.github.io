@@ -29,12 +29,12 @@ date: 2016-05-09
 ## 11. 网站 & Blogs
 
 ### 学习资料
- - [http://nshipster.cn/](http://nshipster.cn/)
+ - [NSHipster](http://nshipster.cn/)
  - [objc中国](http://objccn.io/)
- - [http://oncenote.com/](http://oncenote.com/)
- - [https://github.com/100mango/zen](https://github.com/100mango/zen)
+ - [Jamin's BLog](http://oncenote.com/)
+ - [iOS禅](https://github.com/100mango/zen)
  - [禅与Objective-C开发艺术](https://github.com/oa414/objc-zen-book-cn)
- - [https://github.com/nixzhu/dev-blog](https://github.com/nixzhu/dev-blog)
+ - [一些 iOS / Web 开发相关的翻译或原创博客文章](https://github.com/nixzhu/dev-blog)
  - [苹果官方 Sample 代码集合](https://github.com/robovm/apple-ios-samples)
  - [iOS应用架构](http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html)
  - [iOS保持界面流畅](http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/)
