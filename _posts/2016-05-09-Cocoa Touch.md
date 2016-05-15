@@ -8,6 +8,95 @@ date: 2016-05-09
 
 ## 1. 事件处理
 
+	NSObject: 
+    	UIResponder:
+        	SKNode
+            UIApplication
+            UIView
+            UIViewController
+     
+
+`UIResponder`给对象定义了响应和处理事件的接口。
+它是`UIApplication`, `UIView`的父类，是`UIWindow`的爷类，(~LOL)。
+
+通常的两种事件：触摸事件（`touch events`）和运动事件（`motion events`）。
+
+**触摸事件**的方法：
+```
+touchesBegan:withEvent:
+touchesMoved:withEvent:
+touchesEnded:withEvent:
+touchesCancelled:withEvent:
+```
+这些方法的参数与触摸事件紧密相连，例如刚开始触摸或者触摸发生改变，因此对象可以跟踪和处理这些事件。任何时间点，当你触摸屏幕，滑动屏幕，或者从屏幕挪开手指，都会生成一个`UIEvent`。这个事件对象包含了你对屏幕所做的任何事情，定义在`UITouch`类中。
+
+**运动事件**的方法：
+```
+iOS 3.0:
+ motionBegan:withEvent: 
+ motionEnded:withEvent:
+ motionCancelled:withEvent:
+ canPerformAction:withSender:
+iOS 4.0:
+ remoteControlReceivedWithEvent:
+```
+在iOS 3.0苹果提供了对运动事件的处理方法，例如摇晃设备。
+
+
+#### 管理响应者链
+```
+- nextResponder
+- isFirstResponder
+- canBecomeFirstResponder
+- becomeFirstResponder
+- canResignFirstResponder
+- resignFirstResponder
+```
+
+
+#### 管理inputViews
+```
+inputView (Property)
+inputViewController (Property)
+inputAccessoryView (Property)
+inputAccessoryViewController (Property)
+- reloadInputViews
+```
+
+#### 触摸事件响应
+```
+- touchesBegan:withEvent:
+- touchesMoved:withEvent:
+- touchesEnded:withEvent:
+- touchesCancelled:withEvent:
+- touchesEstimatedPropertiesUpdated:
+```
+
+#### 运动事件响应
+
+```
+- motionBegan:withEvent:
+- motionEnded:withEvent:
+- motionCancelled:withEvent:
+```
+
+#### 按压事件响应
+
+```
+- pressesBegan:withEvent:
+- pressesCancelled:withEvent:
+- pressesChanged:withEvent:
+- pressesEnded:withEvent:
+```
+
+#### 远程控制事件响应
+
+```
+- remoteControlReceivedWithEvent:
+```
+
+
+
 ## 2. UIApplication
 
 ## 3. UIView
