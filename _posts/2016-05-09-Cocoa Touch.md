@@ -9,11 +9,11 @@ date: 2016-05-09
 ## 1. 事件处理
 
 	NSObject: 
-    	UIResponder:
-        	SKNode
-            UIApplication
-            UIView
-            UIViewController
+    		UIResponder:
+        		SKNode
+            		UIApplication
+            		UIView
+            		UIViewController
      
 
 `UIResponder`给对象定义了响应和处理事件的接口。
@@ -22,6 +22,7 @@ date: 2016-05-09
 通常的两种事件：触摸事件（`touch events`）和运动事件（`motion events`）。
 
 **触摸事件**的方法：
+
 ```
 touchesBegan:withEvent:
 touchesMoved:withEvent:
