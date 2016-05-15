@@ -102,6 +102,67 @@ inputAccessoryViewController (Property)
 
 ## 2. UIApplication
 
+程序运行期间`UIApplication`完成集中控制和协调的工作。
+
+每个app都必须有且仅有一个`UIApplication`的实例。
+
+当app开始运行时，系统会调用`UIApplicationMain`方法来启动，它会创建一个`UIApplication`的单例。
+
+UIApplication 的一个主要工作是处理用户事件，它会把所有用户事件都放入一个队列中，逐个处理；在处理的时候，它会将事件发送到一个合适的目标控件。
+
+此外，UIApplication 实例还维护一个在本应用中打开的 window 列表（UIWindow 实例），这样它就可以接触应用中的任何一个 UIView 对象。
+
+
+UIApplication 实例会被赋予一个代理对象，以处理应用程序的生命周期事件（比如程序启动和关闭）、系统事件（比如来电、记事项警告）等等。
+
+
+### UIApplication生命周期
+
+|状态|说明|
+|:---|:---|
+|Not running|程序没有启动|
+|Inactive|前台运行，但无事件响应|
+|Active|前台运行，且有事件响应|
+|Background|后台运行，可以处理一些事件|
+|Suspended|在后台不能处理事件，内存不够app就会被清除|
+
+
+
+### 常见代理方法
+
+- `(void)applicationWillResignActive:(UIApplication *)application`
+
+当应用程序将要入非活动状态执行，在此期间，应用程序不接收消息或事件，比如来电话了
+
+- `(void)applicationDidBecomeActive:(UIApplication *)application`
+
+当应用程序入活动状态执行，这个刚好跟上面那个方法相反
+
+- `(void)applicationDidEnterBackground:(UIApplication *)application`
+
+当程序被推送到后台的时候调用。所以要设置后台继续运行，则在这个函数里面设置即可
+
+- `(void)applicationWillEnterForeground:(UIApplication *)application`
+
+当程序从后台将要重新回到前台时候调用，这个刚好跟上面的那个方法相反。
+
+- `(void)applicationWillTerminate:(UIApplication *)application`
+
+当程序将要退出是被调用，通常是用来保存数据和一些退出前的清理工作。这个需要设置 UIApplicationExitsOnSuspend 的键值。
+
+- `(void)applicationDidReceiveMemoryWarning:(UIApplication *)application`
+
+iPhone 设备只有有限的内存，如果为应用程序分配了太多内存操作系统会终止应用程序的运行，在终止前会执行这个方法，通常可以在这里进行内存清理工作防止程序被终止.
+
+- `(void)applicationSignificantTimeChange:(UIApplication*)application`
+
+当系统时间发生改变时执行
+
+- `(void)applicationDidFinishLaunching:(UIApplication*)application`
+
+当程序载入后执行
+
+
 ## 3. UIView
 
 ## 4. UIViewController
