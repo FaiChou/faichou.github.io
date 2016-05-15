@@ -162,6 +162,8 @@ iPhone 设备只有有限的内存，如果为应用程序分配了太多内存�
 
 当程序载入后执行
 
+![App生命周期示意图]
+(https://github.com/FaiChou/faichou.github.io/blob/master/img/UIApplication-Delegate-Messaging-with-Multitasking.jpg)
 
 ## 3. UIView
 
