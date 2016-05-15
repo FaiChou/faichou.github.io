@@ -120,11 +120,11 @@ UIApplication 实例会被赋予一个代理对象，以处理应用程序的生
 
 |状态|说明|
 |:---|:---|
-|Not running|程序没有启动|
-|Inactive|前台运行，但无事件响应|
-|Active|前台运行，且有事件响应|
-|Background|后台运行，可以处理一些事件|
-|Suspended|在后台不能处理事件，内存不够app就会被清除|
+|**Not running**|程序没有启动|
+|**Inactive**|前台运行，但无事件响应|
+|**Active**|前台运行，且有事件响应|
+|**Background**|后台运行，可以处理一些事件|
+|**Suspended**|在后台不能处理事件，内存不够app就会被清除|
 
 
 
