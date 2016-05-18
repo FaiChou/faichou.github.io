@@ -333,7 +333,7 @@ UIView时UIResponder的子类，可以响应触控事件。
 
 UIViewController(视图控制器)是 iOS Apps 管理视图的基本工具。它是MVC设计模式中的C部分。UIViewController在UIKit中主要功能是用于控制画面的切换，其中的`view`属性(UIView类型)管理整个画面的外观。
 
-## UIViewController 生命周期
+### UIViewController 生命周期
 
 UIViewController生命周期的第一步是初始化。不过具体调用的方法在SB和纯代码中还有所不同，这里只讲代码。代码中我们可以使用`init:`函数进行初始化，`init:`函数在实现过程中还会调用`initWithNibName:bundle:`。我们应该尽量避免在VC外部调用`initWithNibName:bundle:`，而是把它放在VC的内部。原因如下：
 
