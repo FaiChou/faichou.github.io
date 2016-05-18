@@ -331,6 +331,93 @@ UIView时UIResponder的子类，可以响应触控事件。
 
 ## 4. UIViewController
 
+UIViewController(视图控制器)是 iOS Apps 管理视图的基本工具。它是MVC设计模式中的C部分。UIViewController在UIKit中主要功能是用于控制画面的切换，其中的`view`属性(UIView类型)管理整个画面的外观。
+
+## UIViewController 生命周期
+
+UIViewController生命周期的第一步是初始化。不过具体调用的方法在SB和纯代码中还有所不同，这里只讲代码。代码中我们可以使用`init:`函数进行初始化，`init:`函数在实现过程中还会调用`initWithNibName:bundle:`。我们应该尽量避免在VC外部调用`initWithNibName:bundle:`，而是把它放在VC的内部。原因如下：
+
+**苹果官方要求**
+
+假如我们这样：
+
+```
+FCViewController *fcVC = [[FCViewController alloc] initWithNibName:@"Myview" bundle:nil];
+```
+
+那么我可以告诉你，这是不规范的，违反了类的封装原则。
+
+我们应该这样写：
+
+```
+FCViewController *fcVC = [[FCViewController alloc] init];
+```
+
+在 `FCViewController`里：
+
+```
+- (id)init
+{
+   self = [super initWithNibName:@"Myview" bundle:nil];
+   if (self != nil)
+   {
+       // Further initialization if needed
+   }
+   return self;
+}
+
+- (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle
+{
+    NSAssert(NO, @"Initialize with -init");
+    return nil;
+}
+```
+
+这样就会将主权交还给对象，防止破坏封装原则。如果你修改了NIB的名字，就不需要在每个实例的初始化地方修改，只需要在一个VC里修改就可以了。
+
+
+---
+
+初始化完成后，VC的生命周期会经过下面几个函数：
+
+```
+(void)loadView
+(void)viewDidLoad
+(void)viewWillAppear
+(void)viewWillLayoutSubviews
+(void)viewDidLayoutSubviews
+(void)viewDidAppear
+(void)viewWillDisappear
+(void)viewDidDisappear
+```
+
+
+假设现在有一个 AViewController(简称 Avc) 和 BViewController (简称 Bvc)，通过 navigationController 的 push 实现 Avc 到 Bvc 的跳转，下面是各个方法的执行执行顺序：
+
+```
+1. A viewDidLoad  
+2. A viewWillAppear  
+3. A viewDidAppear  
+4. B viewDidLoad  
+5. A viewWillDisappear  
+6. B viewWillAppear  
+7. A viewDidDisappear  
+8. B viewDidAppear  
+```
+
+如果再从 Bvc 跳回 Avc，会产生下面的执行顺序：
+
+```
+1. B viewWillDisappear  
+2. A viewWillAppear  
+3. B viewDidDisappear  
+4. A viewDidAppear  
+```
+
+可见 viewDidLoad 只会调用一次，再第二次跳回 Avc 的时候，AViewController 仍然存在于内存中，也就不需要 load 了。
+
+
+
 ## 5. 动画
 
 ## 6. 网络编程
