@@ -424,6 +424,66 @@ FCViewController *fcVC = [[FCViewController alloc] init];
 
 ## 7. 并发编程
 
+iOS 中的多线程，是 Cocoa 框架下的多线程，通过 Cocoa 的封装，可以让我们更为方便的进行多线程编程。
+
+Cocoa 中封装了 NSThread, NSOperation, GCD 三种多线程编程方式。
+
+- NSThread
+
+> NSThread 是一个控制线程执行的对象，通过它我们可以方便的得到一个线程并控制它。NSThread 的线程之间的并发控制，是需要我们自己来控制的，可以通过 NSCondition 实现。它的缺点是需要自己维护线程的生命周期和线程的同步和互斥等，优点是轻量，灵活。
+
+- NSOperation
+
+> NSOperation 是一个抽象类，它封装了线程的细节实现，不需要自己管理线程的生命周期和线程的同步和互斥等。只是需要关注自己的业务逻辑处理，需要和 NSOperationQueue 一起使用。使用 NSOperation 时，你可以很方便的设置线程之间的依赖关系。这在略微复杂的业务需求中尤为重要。
+
+- GCD
+
+> GCD(Grand Central Dispatch) 是 Apple 开发的一个多核编程的解决方法。在 iOS4.0 开始之后才能使用。GCD 是一个可以替代 NSThread 的很高效和强大的技术。当实现简单的需求时，GCD 是一个不错的选择。
+
+而 NSThread 大多被淘汰了，苹果推荐使用 GCD 和 NSOperation。
+
+### GCD
+
+[GCD 深入理解](https://github.com/nixzhu/dev-blog/blob/master/2014-04-19-grand-central-dispatch-in-depth-part-1.md)
+
+[理解 iOS 开发中 GCD 相关的同步（synchronization）\ 异步（asynchronization），串行（serial）\ 并行（concurrency）概念](http://huuang.com/?p=83)
+
+[并发编程之GCD](https://www.chenghu.me/?p=942)
+
+关于死锁问题，可以看我简书的[一篇](http://www.jianshu.com/p/f91773c21a21)。
+
+
+### NSOperation 和 NSOperationQueue
+
+NSOperation 和 NSOperationQueue 并不一定要一起使用。
+NSOperation 本身是可以单独使用的，不过单独使用的话并不能体现出 NSOperation 的强大之处（从下面的部分你就能看出单独用 NSOperation 真的是做不了什么事情），通常还是使用 NSOperationQueue 来执行 NSOperation。
+
+NSOperation 是一个抽象类，我们需要继承它并且实现我们的子类。
+
+#### 并发和非并发
+
+#### 在 NSOperationQueue 中运行
+
+##### Dependency
+
+##### Cancellation
+
+##### maxConcurrentOperationCount
+
+##### Queue 的优先级
+
+
+### GCD 与 NSOperation 的对比
+
+这是面试中经常会问到的一点，这两个都很常用，也都很强大。对比它们可以从下面几个角度来说：
+
+- 首先要明确一点，NSOperationQueue 是基于 GCD 的更高层的封装，从 OS X 10.10 开始可以通过设置 `underlyingQueue` 来把 operation 放到已有的 dispatch queue 中。
+- 从易用性角度，GCD 由于采用 C 风格的 API，在调用上比使用面向对象风格的 NSOperation 要简单一些。
+- 从对任务的控制性来说，NSOperation 显著得好于 GCD，和 GCD 相比支持了 Cancel 操作，支持任务之间的依赖关系，支持同一个队列中任务的优先级设置，同时还可以通过 KVO 来监控任务的执行情况。这些通过 GCD 也可以实现，不过需要很多代码，使用 NSOperation 显得方便了很多。
+- 从第三方库的角度，知名的第三方库如 AFNetworking 和 SDWebImage 背后都是使用 NSOperation，也从另一方面说明对于需要复杂并发控制的需求，NSOperation 是更好的选择。
+
+
+
 ## 8. 文件系统
 
 ## 9. 设计模式
