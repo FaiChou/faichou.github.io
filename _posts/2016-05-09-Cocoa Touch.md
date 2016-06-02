@@ -514,7 +514,7 @@ NSHomeDirectory() // 沙盒目录
 [[NSBundle mainBundle] bundlePath] // MyApp.app
 NSTemporaryDirectory() // tmp
 NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] // Documents
-NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0] // Documents
+NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0] // Library
 ```
 
 
