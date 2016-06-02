@@ -486,6 +486,39 @@ NSOperation 是一个抽象类，我们需要继承它并且实现我们的子�
 
 ## 8. 文件系统
 
+
+
+### iOS文件目录结构
+
+苹果为了安全，将每个应用以及数据放到了沙盒(Sandbox)里，应用只能访问自己沙盒目录下的内容和网络资源等。当然也可以被授权访问系统的相机、照片和通讯录等。
+
+#### 沙盒的目录结构：
+
+- MyApp.app
+    包含了应用程序本身的数据，程序打包时的文件，可执行文件，plist等。
+
+- Documents
+   这个目录用来存放关键数据。
+
+- Library
+    用来存放一些配置文件和其他一些文件。
+    其中使用`NSUserDefaults`写的数据会保存到`Library/Preferences`下的一个plist中。
+
+- tmp
+    存放临时文件。
+
+#### 获取路径的方法
+
+```
+NSHomeDirectory() // 沙盒目录
+[[NSBundle mainBundle] bundlePath] // MyApp.app
+NSTemporaryDirectory() // tmp
+NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] // Documents
+NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0] // Documents
+```
+
+
+
 ## 9. 设计模式
 
 ## 10. 性能
