@@ -521,6 +521,319 @@ NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0
 
 ## 9. 设计模式
 
+
+### 9.1 单例模式
+
+单例模式在开发中经常使用。
+一个简单的单利模式示例代码：
+
+```
+/* UserInfo.h */
+#import <Foundation/Foundation.h>
+
+#define kSharedUserInfo [UserInfo sharedUserInfo]
+
+@interface UserInfo : NSObject
+
+@property (copy, nonatomic) NSString *userName;
+@property (copy, nonatomic) NSString *userPassword;
+
++ (UserInfo *)sharedUserInfo;
+
+- (void)logIn;
+- (void)logOff;
+- (void)saveUserName;
+- (void)saveUserPassword;
+
+@end
+
+
+/* UserInfo.m */
+#import "UserInfo.h"
+@implementation UserInfo
+
+static UserInfo *sharedUserInfoInstance = nil;
+
+- (id)init {
+    if (self = [super init]) {
+        _userName = @"fcName";
+        _userPassword = @"fcPassword";
+    }
+    return self;
+}
+
++ (UserInfo *)sharedUserInfo {
+    @synchronized(self) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            sharedUserInfoInstance = [[UserInfo alloc] init];
+        });
+    }
+    return sharedUserInfoInstance;
+}
+
++ (id)allocWithZone:(NSZone *)zone {
+    @synchronized(self) {
+        if(sharedUserInfoInstance == nil){
+            sharedUserInfoInstance = [super allocWithZone:zone];
+            return sharedUserInfoInstance;
+        }
+    }
+    return nil;
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return self;
+}
+
+- (void)logIn {
+    NSLog(@"%s",__func__);
+}
+- (void)logOff {
+    NSLog(@"%s",__func__);
+}
+- (void)saveUserName {
+    NSLog(@"%s",__func__);
+}
+- (void)saveUserPassword {
+    NSLog(@"%s",__func__);
+}
+
+@end
+
+
+/* 使用 */
+#import ...
+#import "UserInfo.h"
+
+...
+- (void)foo {
+    [kSharedUserInfo logIn];
+}
+```
+
+经常需要编写“只需执行一次的线程安全代码”。通过GCD所提供的`dispatch_once`函数，很容易实现此功能。
+
+### 9.2 工厂模式
+
+工厂模式可以简化类的初始化过程。
+
+```
+/* FCEmployee.h */
+#import <Foundation/Foundation.h>
+
+typedef NS_ENUM(NSUInteger, FCEmployeeType) {
+    FCEmployeeTypeDeveloper,
+    FCEmployeeTypeDesigner,
+    FCEmployeeTypeFinance,
+};
+
+@interface FCEmployee : NSObject
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic) NSUInteger salary;
+
++ (FCEmployee *)employeeWithType:(FCEmployeeType)type;
+- (void)doADaysWork;
+
+@end
+
+/* FCEmployee.m */
+#import "FCEmployee.h"
+#import "FCEmployeeDeveloper.h"
+
+@implementation FCEmployee
+
++ (FCEmployee *)employeeWithType:(FCEmployeeType)type {
+    switch (type) {
+        case FCEmployeeTypeDeveloper:
+            return [[FCEmployeeDeveloper alloc] init];
+            break;
+        case FCEmployeeTypeDesigner:
+            return [[FCEmployeeDeveloper alloc] init];
+            break;
+        case FCEmployeeTypeFinance:
+            return [[FCEmployeeDeveloper alloc] init];
+            break;
+            
+    }
+    
+}
+- (void)doADaysWork {
+    // in it's subclass
+}
+
+@end
+
+/* FCEmployeeDeveloper.h */
+#import "FCEmployee.h"
+
+@interface FCEmployeeDeveloper : FCEmployee
+
+@end
+
+/* FCEmployeeDeveloper.m */
+#import "FCEmployeeDeveloper.h"
+
+@implementation FCEmployeeDeveloper
+
+- (void)doADaysWork{
+    // 子类其工作的实现细节
+    [self writeCode];
+}
+
+- (void)writeCode{
+    NSLog(@"writeCode");
+}
+
+@end
+
+/* main.m */
+...
+main() {
+    FCEmployee *developer = [FCEmployee employeeWithType:FCEmployeeTypeDeveloper];
+        NSLog(@"%@",[developer class]);
+}
+```
+
+
+
+### 9.3 委托模式
+
+委托模式可以实现对象间的通信。
+
+优点：数据与业务逻辑解耦。
+
+示例代码：
+
+```
+@protocol PrintDelegate <NSObject>
+- (void)print;
+@end
+
+
+@interface AClass : NSObject<PrintDelegate>
+@property id<PrintDelegate> delegate;
+@end
+
+@implementation AClass
+
+-(void)sayHello {
+    [self.delegate print];
+}
+
+-(void)print {
+    NSLog(@"Do Print");
+}
+@end
+
+// 使用 AClass
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        AClass * a = [AClass new];
+        a.delegate = a;
+        [a sayHello];
+    }
+    return 0;
+}
+```
+
+### 9.4 观察者模式
+
+Cocoa 中提供了两种用于实现观察者模式的办法，一直是使用`NSNotification`，另一种是`KVO`(Key Value Observing)。
+
+#### 9.4.1 KVO
+
+KVO的实现依赖于 Objective-C 本身强大的 KVC(Key Value Coding) 特性，可以实现对于某个属性变化的动态监测。
+
+示例代码：
+
+```
+// Book类
+@interface Book : NSObject
+
+@property NSString *name;
+@property CGFloat price;
+
+@end
+
+// AClass类
+@class Book;
+@interface AClass : NSObject
+
+@property (strong) Book *book;
+
+@end
+
+@implementation AClass
+
+- (id)init:(Book *)theBook {
+    if(self = [super init]){
+        self.book = theBook;
+        [self.book addObserver:self forKeyPath:@"price" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    }
+    return self;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context{
+    if([keyPath isEqual:@"price"]){
+        NSLog(@"------price is changed------");
+        NSLog(@"old price is %@",[change objectForKey:@"old"]);
+        NSLog(@"new price is %@",[change objectForKey:@"new"]);
+    }
+}
+
+- (void)dealloc{
+    [self.book removeObserver:self forKeyPath:@"price"];
+}
+@end
+
+// 使用 KVO
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        Book *aBook = [Book new];
+        aBook.price = 10.9;
+        AClass * a = [[AClass alloc] init:aBook];
+        aBook.price = 11; // 输出 price is changed
+    }
+    return 0;
+}
+```
+
+KVO进阶请看[这里](http://objccn.io/issue-7-3/)
+
+#### 9.4.2 NSNotification
+
+`NSNotification` 基于 Cocoa 自己的消息中心组件 `NSNotificationCenter` 实现。
+
+观察者需要统一在消息中心注册，说明自己要观察哪些值的变化。观察者通过类似下面的函数来进行注册：
+
+```
+[[NSNotificationCenter defaultCenter] addObserver:self
+                         selector:@selector(printName:)
+                             name: @"messageName"
+                           object:nil];
+```
+
+上面的函数表明把自身注册成 "messageName" 消息的观察者，当有消息时，会调用自己的 printName 方法。
+
+消息发送者使用类似下面的函数发送消息：
+
+```
+[[NSNotificationCenter defaultCenter] postNotificationName:@"messageName"
+                                    object:nil
+                                  userInfo:nil];
+```
+
+当然最后别忘在`dealloc`中移除
+
+```
+[[NSNotificationCenter defaultCenter] removeObserver:self];
+```
+
 ## 10. 性能
 
 ## 11. 网站 & Blogs
