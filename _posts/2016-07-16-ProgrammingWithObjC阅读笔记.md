@@ -6,7 +6,7 @@ date: 2016-07-16
 
 > 发表时间：2016-07-16 10:00   
 > 文章分类：读书(`ProgrammingWithObjectiveC`)笔记   
-> 原文地址：http://faichou.space
+> 原文地址：http://faichou.space/notes/2016/07/16/ProgrammingWithObjC%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0
 
 ## 目录
 1. Objective-C介绍
