@@ -194,7 +194,7 @@ NSInvocation 实际上就是对一个消息的描述，包括selector 以及参�
 }
 ```
 
-#### 消息转发的全部流程，一图以弊之
+#### 消息转发的全部流程，一图以蔽之
 
 ![message_handle](http://o7bkcj7d7.bkt.clouddn.com/message_handle.png)
 
