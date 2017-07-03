@@ -4,7 +4,7 @@ title: "Swift Tips"
 date: 2017-07-03
 ---
 
-##### 1.  "Implicitly Unwrapped" Optional
+### 1.  "Implicitly Unwrapped" Optional
 
 在许多类或者结构体中，有些属性的值随着实例化即可确定下来不为空，那么这种情况下再做判断或者解析就显得繁冗且低效，做了好多不必要的工作，就像下面这个例子。
 
@@ -34,7 +34,8 @@ if Bob.id != nil {
 
 其实无论类型是用`!`还是用`?`声明的，类型都是作为Optional的存在，但是`!`被称作隐式解析可选类型，意味着你想获取其值不必解析，可以直接拿来用，但是呢，也不代表它不为nil。
 
-##### 2. collection使用字面量进行初始化
+
+### 2. collection使用字面量进行初始化
 
 ```swift
 var arr: [String] = []
@@ -42,7 +43,8 @@ var dic: [String: Int] = []
 var set: Set<String> = []
 ```
 
-##### 3. url中汉字encode
+
+### 3. url中汉字encode
 
 ```swift
 let urlStr = "http://faichou.space?name=周辉"
@@ -50,13 +52,15 @@ let urlStrEncode = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQuery
 print(urlStrEncode) // http://faichou.space?name=%E5%91...
 ```
 
-##### 4.  #line #file #function
+
+### 4.  #line #file #function
 
 <img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1499091752944.png" width="500"/>
 
 `#line` `#function` `#file` 在Swift中相当于Objective-C中的`__LINE__` `__FUNCTION__` `__FILE__`。
 
-##### 5. guard let 和 if let 
+
+### 5. guard let 和 if let 
 
 ```swift
 func foo() {
@@ -76,7 +80,8 @@ func bar() {
 }
 ```
 
-##### 6. 高阶函数
+
+### 6. 高阶函数
 
 ```swift
 let arr = [1, 3, 2, 4]			   // 求
@@ -86,7 +91,8 @@ let res = arr.filter { $0%2 == 0 } // 数组中偶数的
 
 ```
 
-##### 7. singleton
+
+### 7. singleton
 
 ```swift
 class Singleton {
@@ -95,7 +101,8 @@ class Singleton {
 }
 ```
 
-##### 8. 闭包中使用self
+
+### 8. 闭包中使用self
 
 ```swift
 User.autologin(phone, password) {
