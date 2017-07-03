@@ -72,11 +72,11 @@ func foo() {
 }
 func bar() {
   if let url = URL(string: urlString), url.pathExtension == "png",
-  	 let data = try? Data(contentsOf: url),
-  	 let image = UIImage(data: data) {
+     let data = try? Data(contentsOf: url),
+     let image = UIImage(data: data) {
        let view = UIImageView(image: image)
        // ..
-  	}
+  }
 }
 ```
 
@@ -84,10 +84,10 @@ func bar() {
 ### 6. 高阶函数
 
 ```swift
-let arr = [1, 3, 2, 4]			   // 求
-let res = arr.filter { $0%2 == 0 } // 数组中偶数的
-			 .map { $0*$0 } 	   // 平方
-			 .reduce { 0, + }	   // 和
+let arr = [1, 3, 2, 4]			// 求
+let res = arr.filter { $0%2 == 0 } 	// 数组中偶数的
+	.map { $0*$0 } 	   		// 平方
+	.reduce { 0, + }	   	// 和
 
 ```
 
