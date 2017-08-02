@@ -4,7 +4,7 @@ title: "CSS Selectors Note"
 date: 2017-08-02
 ---
 
-### CSS 笔记选择器笔记
+### CSS 选择器笔记
 
 ```css
 * { margin:0; padding:0; } // all
