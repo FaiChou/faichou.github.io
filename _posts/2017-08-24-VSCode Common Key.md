@@ -17,15 +17,17 @@ date: 2017-08-24
 
 # Global
 
+```
 Command + Shift + P / F1 显示命令面板
 Command + P 快速打开
 Command + Shift + N 打开新窗口
 Command + W 关闭窗口
-
+```
 
 
 # Base
 
+```
 Command + X 剪切（未选中文本的情况下，剪切光标所在行）
 Command + C 复制（未选中文本的情况下，复制光标所在行）
 Option + Up 向上移动行
@@ -41,32 +43,35 @@ Command + ] 增加缩进
 Command + Up 跳转至文件开头
 Command + Down 跳转至文件结尾
 Command + / 添加、移除行注释
-
+```
 
 
 # Cursor & Selection
 
+```
 Option + 点击 插入多个光标
 Command + Option + Up 向上插入光标
 Command + Option + Down 向下插入光标
 Command + I 选中当前行(**st: cmd+L**)
 Command + Shift + L 选中所有与当前选中内容相同部分
-
+```
 
 
 # Find & Replace
 
+```
 Command + F 查找
 Command + Option + F 替换
 Command + G 查找下一个
 Command + Shift + G 查找上一个
 Option + Enter 选中所有匹配项
 Command + D 向下选中相同内容
-
+```
 
 
 # More
 
+```
 Command + W 关闭编辑器
 Command + K F 关闭文件夹
 Command + \ 编辑器分屏
@@ -90,3 +95,4 @@ Command + B 显示、隐藏侧边栏
 
 Ctrl + ` 显示终端
 Ctrl + Shift + ` 新建终端
+```
