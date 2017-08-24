@@ -52,7 +52,7 @@ Command + / 添加、移除行注释
 Option + 点击 插入多个光标
 Command + Option + Up 向上插入光标
 Command + Option + Down 向下插入光标
-Command + I 选中当前行(**st: cmd+L**)
+Command + I 选中当前行(st: cmd+L)
 Command + Shift + L 选中所有与当前选中内容相同部分
 ```
 
