@@ -4,7 +4,6 @@ title: "Immutable"
 date: 2017-09-05
 ---
 
-# Immutable.js
 
 ```javascript
 import { List, Map } from 'immutable';
