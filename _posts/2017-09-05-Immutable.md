@@ -119,6 +119,12 @@ let map = Map(obj)
 map.get("1") // "one"
 map.get(1)   // undefined
 
+
+let obj = {a: [1, 2, 3]}
+let imObj1 = Immutable.Map(obj) // Map can't init deep persistent immutablejs.
+let imObj2 = Immutable.fromJS(obj) // use fromJS()
+imObj1.get('a') // it's a js array
+imObj2.get('a') // it's an immutable List
 ```
 
 
