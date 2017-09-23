@@ -199,3 +199,6 @@ if __name__ == '__main__':
 
 <img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506182871970.png" width="600"/>
 
+
+
+可以在[这里](https://github.com/FaiChou/PasswordGen_Alfred)找到我上传的workflow安装使用。
