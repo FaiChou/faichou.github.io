@@ -50,7 +50,7 @@ date: 2017-09-24
 
 点击下方加号，创建一个空白的workflow，输入基本信息。
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506181345549.png" width="995"/>
+<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506181345549.png" width="600"/>
 
 <img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506181631614.png" width="600"/>
 
@@ -58,7 +58,7 @@ date: 2017-09-24
 
 
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506181752514.png" width="372"/>
+<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506181752514.png" width="400"/>
 
 在空白板上右键，actions->run script：
 
