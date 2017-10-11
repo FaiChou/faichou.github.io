@@ -8,7 +8,7 @@ yarn, npm, rubygems源都被我更改/添加了淘宝/rubychina源，有些时�
 
 
 
-1. yarn
+#### yarn
 
 `yarn config get registry`  查看源
 
@@ -26,7 +26,7 @@ yarn, npm, rubygems源都被我更改/添加了淘宝/rubychina源，有些时�
 
 
 
-2. npm
+#### npm
 
 `npm config get registry`  查看源
 
@@ -38,7 +38,7 @@ yarn, npm, rubygems源都被我更改/添加了淘宝/rubychina源，有些时�
 
 
 
-3. rubygems
+#### rubygems
 
 
 gem sources -l // 查看所有源
@@ -56,7 +56,7 @@ gem sources -l // 查看所有源
 `gem sources -u `更新下缓存。
 
 
-
+---
 
 
 快乐的写bug吧😆
