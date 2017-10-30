@@ -1,5 +1,5 @@
 # FaiChou
 
-Hi, there, I'm faichou. 
+Hi, there, I'm FaiChou, this is my blog.
 
-I like python, iOS, Rocking n' Roll, Post-Rock, classical, Damien Rice, Neil Young, Robert Rodriguex, Quentin Tarantino..
+I like react, python, iOS, Rocking n' Roll, Post-Rock, classical, Damien Rice, Neil Young, Robert Rodriguex, Quentin Tarantino..
