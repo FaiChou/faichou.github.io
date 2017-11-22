@@ -14,9 +14,9 @@ blockquote p { font-size: 16px; line-height: 1.6em; }
 h3.text-muted a {text-decoration: none; color: #999999; }
 h3.text-muted a:hover { text-decoration: none; color: #0088cc; }
 
-/* All a tag */
+/* All <a> tag */
 a {
-    text-decoration: none;
+    text-decoration: none!important;
     position: relative;
 }
 a:before {
@@ -25,7 +25,7 @@ a:before {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 2px;
+    height: 1px;
     width: 0;
     background: #2a6496;
     transition: width 0.3s;
@@ -33,6 +33,8 @@ a:before {
 a:hover:before {
     width: 100%;
 }
+/* Except Navigation */
+div.header a:before { content: none; }
 
 /* Avatar */
 img.avatar { margin-bottom: 30px; }
