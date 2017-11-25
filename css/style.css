@@ -17,8 +17,7 @@ h3.text-muted a:hover { text-decoration: none; color: #0088cc; }
 /* All <a> tag */
 a {
     text-decoration: none!important;
-    position: relative;
-}
+    position: relative; }
 a:before {
     content: '';
     display: block;
@@ -28,11 +27,9 @@ a:before {
     height: 1px;
     width: 0;
     background: #2a6496;
-    transition: width 0.3s;
-}
+    transition: width 0.3s; }
 a:hover:before {
-    width: 100%;
-}
+    width: 100%; }
 /* Except Navigation */
 div.header a:before { content: none; }
 
