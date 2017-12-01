@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    RedCloth (4.2.9)
+    RedCloth (4.3.2)
     activesupport (4.1.11)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
@@ -18,7 +18,7 @@ GEM
     ffi (1.9.3)
     gemoji (1.5.0)
     github-pages (18)
-      RedCloth (= 4.2.9)
+      RedCloth (>= 4.3.2)
       jekyll (= 1.5.1)
       jekyll-mentions (= 0.0.6)
       jekyll-redirect-from (= 0.3.1)
