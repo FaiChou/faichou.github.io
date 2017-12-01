@@ -1,16 +1,15 @@
 ---
 layout: post
-title: "Python 装饰器"
+title: "Python装饰器"
 date: 2017-12-01
 ---
 
-## Python 装饰器
 
-*长期寻找好的装饰器*
+> *长期寻找好的装饰器*
 
-#### Log
+#### 1. Log
 
-##### 方法1(传统函数)
+##### (1) 传统函数
 
 ```python
 from functools import wraps
@@ -42,7 +41,7 @@ my_func1()
 my_func2()
 ```
 
-##### 方法2(使用类)
+##### (2) 使用类
 
 ```python
 class Cls_logit(object):
@@ -73,7 +72,7 @@ my_func3(3)
 ```
 
 
-#### Auth验证
+#### 2. Auth验证
 
 ```python
 from functools import wraps
