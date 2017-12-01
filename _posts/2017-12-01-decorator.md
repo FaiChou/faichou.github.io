@@ -1,0 +1,100 @@
+---
+layout: post
+title: "Python 装饰器"
+date: 2017-12-01
+---
+
+## Python 装饰器
+
+*长期寻找好的装饰器*
+
+#### Log
+
+##### 方法1(传统函数)
+
+```python
+from functools import wraps
+import time
+
+
+def logit(filename='out.log'):
+    def logging_decorator(func):
+        @wraps(func)
+        def wrapped_func(*args, **kwargs):
+            t = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
+            log_string = func.__name__ + " was called on " + t
+            print(log_string)
+            with open(filename, 'a') as f:
+                f.write(log_string + '\n')
+            return func(*args, **kwargs)
+        return wrapped_func
+    return logging_decorator
+
+@logit()
+def my_func1():
+    pass
+
+@logit('shit.log')
+def my_func2():
+    pass
+
+my_func1()
+my_func2()
+```
+
+##### 方法2(使用类)
+
+```python
+class Cls_logit(object):
+    _filename = 'cls_logit.log'
+    def __init__(self, func):
+        self.func = func
+
+    def __call__(self, *args):
+        t = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
+        log_string = self.func.__name__ + " called on " + t
+        print(log_string)
+        with open(self._filename, 'a') as f:
+            f.write(log_string + '\n')
+        self.notify()
+        return self.func(*args)
+
+    def notify(self):
+        pass
+
+
+Cls_logit._filename = 'cls_logit2.log'
+
+@Cls_logit
+def my_func3(arg1):
+    print('in my_func3 with', arg1)
+
+my_func3(3)
+```
+
+
+#### Auth验证
+
+```python
+from functools import wraps
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            authenticate()
+        return f(*args, **kwargs)
+    return decorated
+
+@requires_auth
+def user_some_action():
+    pass
+
+```
+
+
+
+
+*未完待续*
+
