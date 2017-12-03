@@ -98,6 +98,7 @@ def user_some_action():
 from functools import wraps
 
 def memoize(function):
+    print('wizardry here')
     memo = {}
     @wraps(function)
     def wrapper(*args):
@@ -114,8 +115,10 @@ def fibonacci(n):
     if n < 2: return n
     return fibonacci(n - 1) + fibonacci(n - 2)
 
-fibonacci(25)
+# fibonacci(25)
 ```
+
+执行上面代码，虽然注释掉了`fibonacci(25)`(也就是没调用函数)，但还是会打印`wizardry here`这行代码，可见装饰器的魔法就在于直接在函数定义后立马替换原来函数。
 
 
 
