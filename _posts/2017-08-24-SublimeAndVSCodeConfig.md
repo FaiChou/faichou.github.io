@@ -4,7 +4,7 @@ title: "Sublime And VSCode Configuration"
 date: 2017-08-24
 ---
 
-### Sublime
+### Sublime Setting-User
 
 ```json
 {
@@ -36,6 +36,40 @@ date: 2017-08-24
 }
 ```
 
+### Sublime Package Control settings
+
+```json
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AutoFileName",
+		"Babel",
+		"Boxy Theme",
+		"Colorsublime",
+		"CSS3",
+		"Dracula Color Scheme",
+		"Emmet",
+		"ESLint",
+		"JSLint",
+		"Material Theme",
+		"Package Control",
+		"React ES6 Snippets",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-jsxhint",
+		"SublimeLinter-pylint",
+		"Theme - Delta",
+		"TrailingSpaces",
+		"TypeScript"
+	]
+}
+```
+
 ### Sublime Python3 Build System
 
 ```json
@@ -50,16 +84,18 @@ date: 2017-08-24
 
 ```json
 {
-  "window.zoomLevel": 1,
-  "editor.fontFamily": "Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
-  "editor.lineHeight": 20,
-  "workbench.colorTheme": "Dracula Soft",
-  "workbench.iconTheme": "vscode-icons",
-  "editor.tabSize": 2,
-  "workbench.startupEditor": "newUntitledFile",
-  "editor.fontSize": 14,
-  "terminal.integrated.fontSize": 14,
-  "vsicons.dontShowNewVersionMessage": true,
-  "workbench.editor.enablePreviewFromQuickOpen": false
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "Source Code Pro, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.lineHeight": 20,
+    "workbench.colorTheme": "Dracula Soft",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.tabSize": 2,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.fontWeight": "300"
 }
 ```
+
