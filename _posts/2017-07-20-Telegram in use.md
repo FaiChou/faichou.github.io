@@ -20,7 +20,6 @@ date: 2017-07-20
 
 #### Telegram优点
 
-在这里我就不做“窃书贼”了，直接将这三篇Link进来吧。
 
 1. [微信之外，有人选择了 Telegram](http://www.ifanr.com/504427)
 2. [Telegram——真正定义即时通讯](https://zhuanlan.zhihu.com/p/25219007)
@@ -32,26 +31,20 @@ date: 2017-07-20
 
 我使用的是`Telegram for PC/Mac/Linux`并非`Telegram for macOS`。
 
-愉快的下载安装了Telegram，高高兴兴输入手机号，点击next，悲剧就发生了，不管等多久，网络就是连接不通。
-
-**这个问题出现的唯一原因就是你生在天朝。**
-
-当然这不是你能够决定的问题，但你可以正确面对，以及正确解决。
-
+愉快的下载安装了Telegram，输入手机号，点击next，悲剧就发生了，网络连接不通。
 
 
 #### 解决方案
 
-*我只上图不说话，说话很危险*
 
 
 
-**First.**
+**Step 1.**
 
 <img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1507699689039.png" width="600"/>
 
 
-**Last.**
+**Step 2.**
 
 <img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1507699732253.png" width="600"/>
 
@@ -64,15 +57,11 @@ date: 2017-07-20
 
 #### 原理
 
-一图以蔽之
-
 
 
 <img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1500530780062.png" width="800"/>
 
-#### 参考
 
-**没参考！！**
 
 
 
