@@ -30,9 +30,9 @@ yarn, npm, rubygems源都被我更改/添加了淘宝/rubychina源，有些时�
 
 `npm config get registry`  查看源
 
-如果不是官方源http://registry.cnpmjs.org/，改成官方源
+如果不是官方源https://registry.npmjs.org/，改成官方源
 
-`npm config set registry 'http://registry.cnpmjs.org/'`
+`npm config set registry 'https://registry.npmjs.org/'`
 
 当然也可以修改`~/.npmrc`这个文件，打开它手动改一下。
 
