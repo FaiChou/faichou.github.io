@@ -140,10 +140,34 @@ ios/ECDeviceFile/Project/UserCenter/UserCenter/UserCenter.xcodeproj/xcuserdata/
 - [cant-ignore-userinterfacestate-xcuserstate](https://stackoverflow.com/questions/6564257/cant-ignore-userinterfacestate-xcuserstate)
 - [ignore-files-that-have-already-been-committed-to-a-git-repository](https://stackoverflow.com/questions/1139762/ignore-files-that-have-already-been-committed-to-a-git-repository)
 - [correctly-ignore-all-files-recursively-under-a-specific-folder-except-for-a-spec](https://stackoverflow.com/questions/17812717/correctly-ignore-all-files-recursively-under-a-specific-folder-except-for-a-spec)
+- [what-pattern-does-gitignore-follow](https://stackoverflow.com/questions/34901807/what-pattern-does-gitignore-follow/34960504#34960504)
+- [regex-like-shell-glob-patterns-for-gitignore](https://stackoverflow.com/questions/19391327/regex-like-shell-glob-patterns-for-gitignore)
 
-
-#### TODO.
+#### PS.
 
 > `*` matches anything except `/`
 
 为何官网说`*`可以匹配除`/`外所有字符, 但是`*.json`却能递归匹配?比如`/a/b/c.json`?
+
+git遵循[fnmatch](http://unixhelp.ed.ac.uk/CGI/man-cgi?fnmatch%203).
+
+用python验证通过的都可以匹配:
+
+```python
+from fnmatch import fnmatch
+pattern = "*.json"
+files = ["a.json", "abc/.json", "a/b/c.json", "d/a.json"]
+
+for file in files:
+    print(file, fnmatch(file, pattern))
+
+```
+
+```
+a.json True
+abc/.json True
+a/b/c.json True
+d/a.json True
+[Finished in 0.1s]
+```
+
