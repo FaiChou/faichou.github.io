@@ -63,10 +63,11 @@ ios/**/*.xcodeproj/xcuserdata/
 
 #### Solution3
 
-在每个和要排除`.xcodeproj`平行路径下添加独立.gitignore :
+在每个要排除`.xcodeproj`路径下一级添加独立.gitignore :
 
 ```
-*.xcodeproj/xcuserdata/
+# in ios/ECDeviceFile/Project/AddressBook/AddressBook/AddressBook.xcodeproj/
+xcuserdata/
 ```
 
 
