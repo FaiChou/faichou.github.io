@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "gitignore递归隐藏某类文件"
+title: "gitignore递归排除某类文件夹"
 date: 2018-05-10
 ---
 
