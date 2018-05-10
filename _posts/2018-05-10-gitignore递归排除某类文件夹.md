@@ -6,13 +6,12 @@ date: 2018-05-10
 
 #### 问题描述
 
-[xcode-git-cant-ignore-xcodeproj-xcuserdata-files](https://stackoverflow.com/questions/50264876/xcode-git-cant-ignore-xcodeproj-xcuserdata-files?noredirect=1#comment87547791_50264876)
+[xcode-git-cant-ignore-all-xcodeproj-xcuserdata-folders](https://stackoverflow.com/questions/50264876/xcode-git-cant-ignore-all-xcodeproj-xcuserdata-folders)
 
-在一个rn项目中, 每次打开Xcode就会自动**生成/修改**一些`xcuserdata/`文件, 将这些类型文件添加到ignore中也无效, 清除git缓存还是不行. 最终才发现是gitignore配置有问题.
+在一个rn项目中, 每次打开Xcode就会自动**生成/修改**一些`xcuserdata/`下文件, 将这些类型文件添加到ignore中也无效, 清除git缓存还是不行. 最终才发现是gitignore配置有问题.
 
-.gitignore是对`.gitignore所在目录`有效, 简单的`*.txt`只是对当前路径下的所有txt后缀文件使用, 对`somefolder/a.txt`不会生效. 所以要排除`somefolder/a.txt`, 需要另加单独配置: `somefolder/*.txt`.
 
-那么如果有很深的目录结构, 有许多要排除的txt类型文件, 比如下面这个图, 如何处理呢?
+那么如果有很深的目录结构, 有许多要排除的`xcuserdata/`文件夹, 比如下面这个图, 如何处理呢?
 (要排除红色的文件夹下文件)
 
 
@@ -22,7 +21,7 @@ date: 2018-05-10
 
 #### Solution1
 
-对每个路径下文件都添加各自的[配置](#.gitignore旧配置(关于Xcode部分))
+对每个路径下文件夹都添加各自的配置
 
 ```
 ios/ECDeviceFile/Project/AddressBook/AddressBook/AddressBook.xcodeproj/xcuserdata/
@@ -38,7 +37,7 @@ git version 2.16.1
 ```
 
 ```
-ios/ECDeviceFile/Project/**/*.xcodeproj/xcuserdata/
+ios/**/*.xcodeproj/xcuserdata/
 ```
 
 #### Solution3
