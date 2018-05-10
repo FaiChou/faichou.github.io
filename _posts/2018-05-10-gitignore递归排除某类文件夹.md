@@ -10,6 +10,21 @@ date: 2018-05-10
 
 在一个rn项目中, 每次打开Xcode就会自动**生成/修改**一些`xcuserdata/`下文件, 将这些类型文件添加到ignore中也无效, 清除git缓存还是不行. 最终才发现是gitignore配置有问题.
 
+Git支持:
+
+- 匹配node_modules目录下除去`node_modules/foo/`的内容
+
+```
+node_modules/
+!node_modules/foo/
+```
+- 匹配所有json文件(递归的!)
+
+```
+*.json
+```
+
+Git不支持这种类型的匹配规则: `*.xcodeproj/xcuserdata/`.
 
 那么如果有很深的目录结构, 有许多要排除的`xcuserdata/`文件夹, 比如下面这个图, 如何处理呢?
 (要排除红色的文件夹下文件)
@@ -38,6 +53,12 @@ git version 2.16.1
 
 ```
 ios/**/*.xcodeproj/xcuserdata/
+```
+
+或者这样:
+
+```
+**/xcuserdata/
 ```
 
 #### Solution3
