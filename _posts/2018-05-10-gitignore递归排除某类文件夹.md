@@ -24,7 +24,29 @@ node_modules/
 *.json
 ```
 
+- 匹配当前目录下的json文件(子目录下无效)
+
+```
+/*.json
+```
+
 Git不支持这种类型的匹配规则: `*.xcodeproj/xcuserdata/`.
+
+> - If the pattern does not contain a slash /, Git treats it as a shell glob pattern and checks for a match against the pathname relative to the location of the .gitignore file (relative to the toplevel of the work tree if not from a .gitignore file).
+
+> - Otherwise, Git treats the pattern as a shell glob: "*" matches anything except "/", "?" matches any one character except "/" and "[]" matches one character in a selected range. See fnmatch(3) and the FNM_PATHNAME flag for a more detailed description.
+
+> - A leading slash matches the beginning of the pathname. For example, "/*.c" matches "cat-file.c" but not "mozilla-sha1/sha1.c".
+
+> Two consecutive asterisks ("**") in patterns matched against full pathname may have special meaning:
+
+> - A leading "**" followed by a slash means match in all directories. For example, "**/foo" matches file or directory "foo" anywhere, the same as pattern "foo". "**/foo/bar" matches file or directory "bar" anywhere that is directly under directory "foo".
+
+> - A trailing "/**" matches everything inside. For example, "abc/**" matches all files inside directory "abc", relative to the location of the .gitignore file, with infinite depth.
+
+> - A slash followed by two consecutive asterisks then a slash matches zero or more directories. For example, "a/**/b" matches "a/b", "a/x/b", "a/x/y/b" and so on.
+
+> - Other consecutive asterisks are considered invalid.
 
 那么如果有很深的目录结构, 有许多要排除的`xcuserdata/`文件夹, 比如下面这个图, 如何处理呢?
 (要排除红色的文件夹下文件)
