@@ -142,3 +142,8 @@ ios/ECDeviceFile/Project/UserCenter/UserCenter/UserCenter.xcodeproj/xcuserdata/
 - [correctly-ignore-all-files-recursively-under-a-specific-folder-except-for-a-spec](https://stackoverflow.com/questions/17812717/correctly-ignore-all-files-recursively-under-a-specific-folder-except-for-a-spec)
 
 
+#### TODO.
+
+> `*` matches anything except `/`
+
+为何官网说`*`可以匹配除`/`外所有字符, 但是`*.json`却能递归匹配?比如`/a/b/c.json`?
