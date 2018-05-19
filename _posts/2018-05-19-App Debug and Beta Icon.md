@@ -98,6 +98,13 @@ convert -spread 30 wulong.png wulong-spread.png
 composite debug-600.png wulong-rotate.png wulong-debug.png
 ```
 
+#### 以上操作结果图片下载地址:
+
+```
+链接:https://pan.baidu.com/s/1m-kMpQa0kuO5UXOCxDE2pA
+密码:lpmq
+```
+
 ## 命令
 
 <img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1526722948628.png" width="600"/>
