@@ -83,7 +83,7 @@ tn      # till next n in this line
 a	      # append
 A	      # append on tail
 i	      # insert
-i	      # insert on head
+I	      # insert on head
 o		   # next line
 O		   # previous line
 s		   # delete char and insert
