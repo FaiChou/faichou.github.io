@@ -14,13 +14,14 @@ date: 2018-06-04
 6. Operators
 7. Text objects
 8. Find and replace
-9. Register
-10. Buffer
-11. Window
-12. Tab
-13. Dir
-14. Other
-15. Nerdtree
+9. Repeat
+10. Register
+11. Buffer
+12. Window
+13. Tab
+14. Dir
+15. Other
+16. Nerdtree
 
 
 ## which vim
@@ -73,8 +74,6 @@ H       # move to top of screen
 M       # move to middle of screen
 L       # move to bottom of screen
 
-fn      # find next n in this line
-tn      # till next n in this line
 ```
 
 ## Editing
@@ -147,6 +146,9 @@ t	          # a XML tag block
 ## Find and replace
 
 ```bash
+fn      # find next n in this line
+tn      # till next n in this line
+
 /foo        # find foo
 /foo\c      # find foo FOO (ignore case)
 
@@ -184,6 +186,40 @@ g*   # find cursor word (foo -> foo, foobar)
 :set noic
 :set nohls
 :set nois
+
+
+# example
+
+yiw # yank inner word 'first'
+# move cursor to 'second'
+viwp # select 'second' and paste with 'first'
+# move cursor to 'third'
+viw"0p # select 'third' and paste with first
+
+yiw # yank inner word 'first'
+# move cursor to 'second'
+ciw<C-R>0<ESC> # change 'second' replace with first
+# move cursor to 'third'
+. # repeat the operation
+```
+
+## Repeat
+
+```bash
+.    # repeat last change
+u    # undo
+
+;    # line find repeat
+,    # line find previous repeat
+
+n    # find repeat
+N    # find previous repeat
+
+&    # substitute repeat
+u    # undo
+
+@{reg} # macro repeat
+
 ```
 
 ## Register
@@ -302,6 +338,10 @@ gT            # go to previous tab
 
 ## Other
 
+> When writing in insert mode, it’s possible to paste a register at the current location without leaving insert mode. To do this, press `CTRL-R` then type the name of a register. For example, `CTRL-R` a will insert the contents of `a`.
+
+
+
 ```bash
 ggvGy   # copy all
 ggyG    # copy all
@@ -316,6 +356,8 @@ ya"     # copy a "" (include "")
 yaw     # copy a word
 yas     # copy a sentense
 yap     # copy a paragraph
+
+:.,+9s/new/<C-R>0/g # replace new to regster0 from current to next 9 lines
 
 ```
 
