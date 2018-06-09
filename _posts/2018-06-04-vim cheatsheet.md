@@ -368,6 +368,12 @@ yap     # copy a paragraph
 <C-P> p p p # auto complete
 <C-J> # new line
 <C-M> # new line
+
+# Leader
+let mapLeader = ","
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+
 ```
 
 ## Nerdtree
