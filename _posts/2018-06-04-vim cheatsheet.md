@@ -359,6 +359,15 @@ yap     # copy a paragraph
 
 :.,+9s/new/<C-R>0/g # replace new to regster0 from current to next 9 lines
 
+# insert mode shortcuts
+<C-W> # delete before cursor words
+<C-[> # quit insert mode
+<C-C> # quit insert mode
+<C-R> 0 # insert copied
+<C-N> n n n # auto complete
+<C-P> p p p # auto complete
+<C-J> # new line
+<C-M> # new line
 ```
 
 ## Nerdtree
