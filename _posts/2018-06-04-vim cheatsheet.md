@@ -357,6 +357,9 @@ yaw     # copy a word
 yas     # copy a sentense
 yap     # copy a paragraph
 
+ds"     # delete surround ""
+cs"'    # change surrond " to '
+
 :.,+9s/new/<C-R>0/g # replace new to regster0 from current to next 9 lines
 
 # insert mode shortcuts
