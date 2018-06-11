@@ -374,6 +374,25 @@ let mapLeader = ","
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 
+# number plus and subtract
+
+<C-a> # add 1
+<C-x> # minus 1
+10<C-a> # add 10
+
+# macro
+
+1. abc # cursor in 1, need insert zzz to 2
+2. def
+3. ghi
+4. jkl
+
+qa # start record, to register a
+j # remove to next line
+<C-a> # add 1
+q # quit record
+3@a # do macro 6 times
+
 ```
 
 ## Nerdtree
