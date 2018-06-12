@@ -47,6 +47,10 @@ $ vim --version | grep "clipboard"
 :wq / :x     # save and close
 :qa          # close all
 :q!          # close file, abandon changes
+
+,w           # write (my Leader is ,)
+,q           # quit
+
 ```
 
 ## Navigating
@@ -60,36 +64,36 @@ q h k l          # move one character
 b / w            # previous / next word
 e / ge           # previous / next end of word
 
-0       # start of line
-^       # start of line (after whitespace)
-$       # end of line
+0                # start of line
+^                # start of line (after whitespace)
+$                # end of line
 
-gg      # first line
-G       # Last line
-:n      # to line n
-nG      # to line n
+gg               # first line
+G                # Last line
+:n               # to line n
+nG               # to line n
 
-zz      # center this line
-H       # move to top of screen
-M       # move to middle of screen
-L       # move to bottom of screen
+zz               # center this line
+H                # move to top of screen
+M                # move to middle of screen
+L                # move to bottom of screen
 
 ```
 
 ## Editing
 
 ```bash
-a	      # append
-A	      # append on tail
-i	      # insert
-I	      # insert on head
-o		   # next line
-O		   # previous line
-s		   # delete char and insert
-S		   # delete line and insert
-C		   # delete until end of line and insert
-r		   # replace one character
-R		   # enter Replace mode
+a       # append
+A       # append on tail
+i       # insert
+I       # insert on head
+o       # next line
+O       # previous line
+s       # delete char and insert
+S       # delete line and insert
+C       # delete until end of line and insert
+r       # replace one character
+R       # enter Replace mode
 ```
 
 ## Clipboard
@@ -106,48 +110,48 @@ P       # paste before
 
 
 ```bash
-d		   # delete
-y		   # yank (copy)
-c		   # change (delete then insert)
->		   # indent right
-<		   # indent left
-=		   # auto indent
-g~		   # swap case
-gU		   # uppercase
-gu	      # lowercase
-!		   # filter through external program
+d       # delete
+y       # yank (copy)
+c       # change (delete then insert)
+>       # indent right
+<       # indent left
+=       # auto indent
+g       # swap case
+g       # uppercase
+g       # lowercase
+!       # filter through external program
 ```
 
 ```bash
-cc		      # delete line and to insert mode
-dd	         # delete line
-yy	         # copy line
-guu/gugu	   # lowercase all
-gUU/gUgU	   # uppercase all
-g~~/g~g~	   # swap case all
->>	         # line right indent
-<<	         # line left indent
-==	         # line auto indent
+cc           # delete line and to insert mode
+dd           # delete line
+yy           # copy line
+guu/gugu     # lowercase all
+gUU/gUgU     # uppercase all
+g~~/g~g~     # swap case all
+>>           # line right indent
+<<           # line left indent
+==           # line auto indent
 ```
 
 ## Text objects
 
 ```bash
-p	          # paragraph
-w	          # word
-s	          # sentence
-[ ( { <	    # a [], (), or {} block
-b	          # a block [(
-B	          # a block in [{
-t	          # a XML tag block
-' " `        # A quoted string
+p          # paragraph
+w          # word
+s          # sentence
+[ ( { <    # a [], (), or {} block
+b          # a block [(
+B          # a block in [{
+t          # a XML tag block
+' " `      # A quoted string
 ```
 
 ## Find and replace
 
 ```bash
-fn      # find next n in this line
-tn      # till next n in this line
+fn          # find next n in this line
+tn          # till next n in this line
 
 /foo        # find foo
 /foo\c      # find foo FOO (ignore case)
@@ -157,10 +161,10 @@ tn      # till next n in this line
 
 n / N       # next / previous one
 
-*    # find cursor word (foo -> foo but not foobar)
-g*   # find cursor word (foo -> foo, foobar)
+*           # find cursor word (foo -> foo but not foobar)
+g*          # find cursor word (foo -> foo, foobar)
 
-#    # find cursor word previous
+#           # find cursor word previous
 
 :{range}s/{old}/{new}/{flag}
 
