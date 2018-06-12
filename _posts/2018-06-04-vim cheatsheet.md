@@ -116,9 +116,9 @@ c       # change (delete then insert)
 >       # indent right
 <       # indent left
 =       # auto indent
-g       # swap case
-g       # uppercase
-g       # lowercase
+g~      # swap case
+gU      # uppercase
+gu      # lowercase
 !       # filter through external program
 ```
 
