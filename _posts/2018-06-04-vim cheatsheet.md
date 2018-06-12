@@ -151,7 +151,9 @@ t          # a XML tag block
 
 ```bash
 fn          # find next n in this line
+Fn          # find previous n in this line
 tn          # till next n in this line
+Tn          # till previous n in this line
 
 /foo        # find foo
 /foo\c      # find foo FOO (ignore case)
