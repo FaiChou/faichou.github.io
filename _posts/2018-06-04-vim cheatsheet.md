@@ -174,6 +174,7 @@ g*          # find cursor word (foo -> foo, foobar)
 :%s/foo/bar/g       # all file
 :'<,'>s/foo/bar/g   # visual mode selection
 :5,12s/foo/bar/g    # line 5~12
+:.,$s/foo/bar/g     # current line to end line
 :.,+2s/foo/bar/g    # current line and next 2 lines
 
 # flag: g(global) i(ignore case) c(need confirm)
@@ -402,6 +403,8 @@ j # remove to next line
 q # quit record
 3@a # do macro 6 times
 
+# match block
+%  # match ([{}])
 ```
 
 ## Nerdtree
