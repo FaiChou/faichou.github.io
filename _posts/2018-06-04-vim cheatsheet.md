@@ -56,7 +56,7 @@ $ vim --version | grep "clipboard"
 ## Navigating
 
 ```bash
-q h k l          # move one character
+h j k l          # move one character
 
 <C-U> / <C-D>    # move half page
 <C-F> / <C-B>    # move one page
