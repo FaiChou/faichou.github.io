@@ -403,6 +403,9 @@ j # remove to next line
 q # quit record
 3@a # do macro 6 times
 
+:'<,'>normal @q # macro in visual
+
+
 # match block
 %  # match ([{}])
 ```
