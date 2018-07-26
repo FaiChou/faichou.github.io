@@ -4,7 +4,9 @@ title: "Iterative-Development"
 date: 2018-07-26
 ---
 
-If you think this approach to development we've taken so far is a little messy, then you're absolutely right.
+> **iOS Apprentice** page 320
+
+If you think development is a little messy, then you're absolutely right.
 
 You started out with one design, but as you continued development you found out that things didn't work out so well in practice, and that you had to refactor your approach a few times to find a way that works.
 
