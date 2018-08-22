@@ -189,11 +189,14 @@ g*          # find cursor word (foo -> foo, foobar)
 :set hls # highlight search
 :set ic  # ignore case
 :set is  # show partial matches for a search phrase
+:set nu  # show line numbers
+:set et|retab  # convert tabs to spaces
 
 :set noic
 :set nohls
 :set nois
-
+:set nonu
+:set et|retab!
 
 # example
 
