@@ -54,7 +54,7 @@ Git不支持这种类型的匹配规则: `*.xcodeproj/xcuserdata/`.
 
 #### 项目结构
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1525927066535.png" width="632"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1525927066535.png" width="632"/>
 
 #### Solution1
 

@@ -55,7 +55,7 @@ print(urlStrEncode) // http://faichou.space?name=%E5%91...
 
 ### 4.  #line #file #function
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1499091752944.png" width="500"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1499091752944.png" width="500"/>
 
 `#line` `#function` `#file` 在Swift中相当于Objective-C中的`__LINE__` `__FUNCTION__` `__FILE__`。
 

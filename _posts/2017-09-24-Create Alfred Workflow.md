@@ -14,17 +14,17 @@ date: 2017-09-24
 
 1. 历史粘贴板（文字都是默认无格式的）
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506179496530.png" width="600"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506179496530.png" width="600"/>
 
 
 
 2. 有道快速翻译workflow:
 
-   <img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506179687942.png" width="600"/>
+   <img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506179687942.png" width="600"/>
 
 3. 股票查询workflow：
 
-   <img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506179787946.png" width="600"/>
+   <img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506179787946.png" width="600"/>
 
 4. markdown图片自动上传七牛workflow：复制任意一张图片，通过组合快捷键`control+command+v`自动上传到绑定的七牛存储空间，上传成功后粘贴板为图片七牛链接。
 
@@ -50,21 +50,21 @@ date: 2017-09-24
 
 点击下方加号，创建一个空白的workflow，输入基本信息。
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506181345549.png" width="600"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506181345549.png" width="600"/>
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506181631614.png" width="600"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506181631614.png" width="600"/>
 
 ### 第二步
 
 
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506181752514.png" width="400"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506181752514.png" width="400"/>
 
 在空白板上右键，actions->run script：
 
 输入如下：
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506181658677.png" width="600"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506181658677.png" width="600"/>
 
 
 
@@ -94,7 +94,7 @@ date: 2017-09-24
 
 看起来是这样的：
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506182216078.png" width="539"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506182216078.png" width="539"/>
 
 
 
@@ -177,7 +177,7 @@ if __name__ == '__main__':
 
 继续右键选择建立一个拷贝到剪切板的输出，建完后是下面这个样子，再将两个模块用线连起来。
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506182525847.png" width="600"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506182525847.png" width="600"/>
 
 这样就大功告成了！！🎉🎉🎉🎉
 
@@ -187,17 +187,17 @@ if __name__ == '__main__':
 
 
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506182678991.png" width="600"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506182678991.png" width="600"/>
 
 点击这个长得像bug的东西进行调试，一切正常！！🎉🎉🎉🎉
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506182782835.png" width="700"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506182782835.png" width="700"/>
 
 
 
 如果想要导出给同事用，点击这个按钮：
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1506182871970.png" width="600"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1506182871970.png" width="600"/>
 
 
 

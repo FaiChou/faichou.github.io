@@ -213,7 +213,7 @@ iPhone 设备只有有限的内存，如果为应用程序分配了太多内存�
 
 App生命周期示意图：
 
-![App生命周期示意图](http://o7bkcj7d7.bkt.clouddn.com/UIApplicationDelegateMessagingWithMultitasking.png-fc.normalImage)
+![App生命周期示意图](http://p9qv3iwy5.bkt.clouddn.com/UIApplicationDelegateMessagingWithMultitasking.png-fc.normalImage)
 
 
 ## 3. UIView

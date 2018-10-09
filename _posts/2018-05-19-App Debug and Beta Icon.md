@@ -4,7 +4,7 @@ title: "App Debug and Beta Icon"
 date: 2018-05-19
 ---
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1526720735188.png" width="602"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1526720735188.png" width="602"/>
 
 ## 目标
 
@@ -107,7 +107,7 @@ composite debug-600.png wulong-rotate.png wulong-debug.png
 
 ## 命令
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1526722948628.png" width="600"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1526722948628.png" width="600"/>
 
 1. 在 `Build Phases` 新建一个 `Script Phase`
 2. 将新建的 `Script Phase` 拖到 `Copy Bundle Resources` 上面
@@ -150,7 +150,7 @@ TARGET_PATH="${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/${BASE_I
 
 现在的方法是将要更换的图标放到项目里(放到和 `app.xcodeproj` 同级下的 `DynamicIcons/` 下), 是debug版的两份, beta版的两份, 正式版的两份.
 
-<img src="http://o7bkcj7d7.bkt.clouddn.com/markdown/1526724536769.png" width="600"/>
+<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1526724536769.png" width="600"/>
 
 
 ```
