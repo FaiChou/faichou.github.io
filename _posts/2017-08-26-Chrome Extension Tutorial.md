@@ -28,11 +28,11 @@ date: 2017-08-26
 
 清除Twitter两侧dashboard栏，达成Ins效果
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/JSisAwesome.gif" width="700px" />
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/JSisAwesome.gif" width="700px" />
 
 #### First
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1503729491238.png" width="700px" />
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1503729491238.png" width="700px" />
 
 
 
@@ -49,7 +49,7 @@ date: 2017-08-26
 
 建立文件们如下(jquery-3.2.1.min.js不需要)
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1503728741100.png" width="700" />
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1503728741100.png" width="700" />
 
 
 
@@ -89,13 +89,13 @@ date: 2017-08-26
 
 permissions是你的extension需要访问哪些权限
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1503732147147.png" width="700"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1503732147147.png" width="700"/>
 
 这里的因为要切换隐藏、展示功能，需要存储它的状态，所以保存在localStorage中。
 
 这里要多说一点，每个web都可以有自己的localStorage
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1503732316931.png" width="700"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1503732316931.png" width="700"/>
 
 咱的extension虽然限定在Twitter上使用并存储localStorage，但是它存的地方并不是和Twitter一个，在chrome可视化界面中，我没找到它存在什么地方，但是路径中是有的，一个单独的localStorage。
 
@@ -229,7 +229,7 @@ chrome.runtime.onMessage.addListener(
 
 首先要在chrome://extensions中打开**开发者模式**，再将我们的文件夹拖到extensions这个页面，也可以通过**加载已解压的扩展程序**按钮来导入。
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1503728756421.png" width="700" />
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1503728756421.png" width="700" />
 
 现在在Twitter刷新下试下，加载完成点按我们的extension，是不是很爽呢？
 
@@ -239,7 +239,7 @@ chrome.runtime.onMessage.addListener(
 
 就像Adblock是如何实现插入代码到html呢？这并不困难
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1503734920661.png" width="700"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1503734920661.png" width="700"/>
 
 
 

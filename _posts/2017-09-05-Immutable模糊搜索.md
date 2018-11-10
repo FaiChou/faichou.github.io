@@ -10,13 +10,13 @@ date: 2017-09-05
 
 大致简化模型如下：
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1504593772808.png" width="600"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1504593772808.png" width="600"/>
 
 
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1504593812214.png" width="600"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1504593812214.png" width="600"/>
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1504593309640.png" width="600"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1504593309640.png" width="600"/>
 
 
 

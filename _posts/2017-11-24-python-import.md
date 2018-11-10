@@ -96,7 +96,7 @@ python解释器在执行文件时，会将当前文件添加一些特殊变量�
 
 比如[这个库](https://github.com/kennethreitz/envoy)。
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1511594759317.png" width="600"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1511594759317.png" width="600"/>
 
 在`__init__.py`中import了core模块的某些方法，比如`run`方法，那么当我们用时候直接:
 

@@ -22,7 +22,7 @@ yarn, npm, rubygems源都被我更改/添加了淘宝/rubychina源，有些时�
 
 刚看了下 `yarn config list`，竟然还有disturl也为淘宝的，索性用给删掉了。
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1507615208265.png" width="600"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1507615208265.png" width="600"/>
 
 
 

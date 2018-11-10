@@ -14,7 +14,7 @@ date: 2017-07-18
 
 同事a要向同事b传一些文件，在同一局域网内
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1500388518380.png" width="563"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1500388518380.png" width="563"/>
 
 ##### 解决方案
 
@@ -65,13 +65,13 @@ alias simpleServer='python -m SimpleHTTPServer'
 
 下图是在我的两台电脑中尝试的截图：在share路径下共享的a/b/c文件，另一台电脑Safari中访问192.168.1.104:8888就可以看到a/b/c三个文件，点击文件就可以下载。
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1500388170510.png" width="600"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1500388170510.png" width="600"/>
 
 
 
 
 
-<img src="http://p9qv3iwy5.bkt.clouddn.com/markdown/1500388200773.png" width="600"/>
+<img src="https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/markdown/1500388200773.png" width="600"/>
 
 
 

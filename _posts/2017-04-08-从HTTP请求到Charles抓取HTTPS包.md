@@ -168,7 +168,7 @@ HTTPS比HTTP多的就是安全，HTTP的数据是明文传输，在OSI模型中�
 
   服务器有一对公钥和私钥，公钥用于加密，私钥用于解密。密钥交换过程：服务器的公钥是公开的，私钥是不公开的，只有服务器持有。浏览器先向服务器取得公钥，然后用公钥加密自己的私钥连同自己私钥加密的请求一并发送给服务器。服务器使用自己私钥解密得到浏览器的私钥，使用浏览器的私钥解密请求。然后再用浏览器的私钥加密response发送回服务器。
 
-![非对称加密](http://p9qv3iwy5.bkt.clouddn.com/asymmetric%20cryptography.png)
+![非对称加密](https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/asymmetric%20cryptography.png)
 
 
 
@@ -184,7 +184,7 @@ HTTPS比HTTP多的就是安全，HTTP的数据是明文传输，在OSI模型中�
 
 其实Charles也是个中间人，只不过它伪装成了服务器，也打扮成了客户端，是一个双重身份。Charles使用时我们需要手动添加证书信任。这样浏览器眼中的服务器就是Charles，而服务器眼中的客户端也是Charles，从而实现了双向数据解密。是不是很简单呢。
 
-![Charles双向数据解密](http://p9qv3iwy5.bkt.clouddn.com/Charles%20crack%20https.png)
+![Charles双向数据解密](https://raw.githubusercontent.com/FaiChou/faichou.github.io/master/img/qiniu/Charles%20crack%20https.png)
 
 
 
