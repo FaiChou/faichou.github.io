@@ -96,6 +96,8 @@ Command + + 放大
 Command + - 缩小
 Command + B toggle侧边栏
 
+Command + J toggle终端栏(panel)
+
 Ctrl + ` 显示终端
 Ctrl + Shift + ` 新建终端
 
