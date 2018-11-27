@@ -84,18 +84,64 @@ date: 2017-08-24
 
 ```json
 {
-    "window.zoomLevel": 1,
     "editor.fontFamily": "Source Code Pro, Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "editor.lineHeight": 20,
-    "workbench.colorTheme": "Dracula Soft",
-    "workbench.iconTheme": "vscode-icons",
     "editor.tabSize": 2,
     "workbench.startupEditor": "newUntitledFile",
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
     "terminal.integrated.fontSize": 14,
-    "vsicons.dontShowNewVersionMessage": true,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.fontWeight": "300"
+    "editor.fontWeight": "300",
+    "workbench.colorTheme": "Dracula",
+    "git.autofetch": true,
+    "gitlens.keymap": "alternate",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "gitlens.historyExplorer.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always", // close annoying
+    "typescript.updateImportsOnFileMove.enabled": "always", // close annoying
+    "gitlens.showWhatsNewAfterUpgrades": false, // close annoying
+    "javascript.suggest.autoImports": false, // close annoying
+    "typescript.suggest.autoImports": false, // close annoying
+    "javascript.suggest.enabled": false, // close annoying
+    "typescript.suggest.enabled": false, // close annoying
+    "workbench.activityBar.visible": false,
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": true,
+    "editor.minimap.enabled": true,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": false,
+    "breadcrumbs.enabled": false,
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#B2B3B3",
+        "titleBar.activeForeground":"#000000",
+    }
 }
+```
+
+### VSCode key-binding (user)
+
+```json
+// Place your key bindings in this file to overwrite the defaults
+[
+  { "key": "cmd+1","command": "workbench.action.openEditorAtIndex1" },
+  { "key": "cmd+2","command": "workbench.action.openEditorAtIndex2" },
+  { "key": "cmd+3","command": "workbench.action.openEditorAtIndex3" },
+  { "key": "cmd+4","command": "workbench.action.openEditorAtIndex4" },
+  { "key": "cmd+5","command": "workbench.action.openEditorAtIndex5" },
+  { "key": "cmd+6","command": "workbench.action.openEditorAtIndex6" },
+  { "key": "cmd+7","command": "workbench.action.openEditorAtIndex7" },
+  { "key": "cmd+8","command": "workbench.action.openEditorAtIndex8" },
+  { "key": "cmd+9","command": "workbench.action.openEditorAtIndex9" }
+]
 ```
 

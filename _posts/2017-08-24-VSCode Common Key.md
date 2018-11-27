@@ -14,13 +14,14 @@ date: 2017-08-24
 | ⌫    | delete          |
 
 
+<img src="https://code.visualstudio.com/assets/docs/getstarted/userinterface/hero.png" alt="code basics hero" width="700">
+
 
 # Global
 
 ```
 Command + Shift + P / F1 显示命令面板
 Command + P 快速打开
-Command + Shift + N 打开新窗口
 Command + W 关闭窗口
 ```
 
@@ -35,6 +36,7 @@ Option + Down 向下移动行
 Option + Shift + Up 向上复制行
 Option + Shift + Down 向下复制行
 Command + Shift + K 删除行
+Ctrl+A Ctrl+K 删除一行
 Command + Enter 下一行插入
 Command + Shift + Enter 上一行插入
 Command + Shift + \ 跳转到匹配的括号
@@ -73,11 +75,12 @@ Command + D 向下选中相同内容
 
 ```
 Command + W 关闭编辑器
-Command + K F 关闭文件夹
 Command + \ 编辑器分屏
-Command + 1 切换到第一分组
-Command + 2 切换到第二分组
-Command + 3 切换到第三分组
+Command + 1 切换到第一tab
+Command + 2 切换到第二tab
+Command + 3 切换到第三tab
+...
+Command + 9 切换到第九tab
 
 Command + N 新建文件
 Command + O 打开文件
@@ -91,8 +94,15 @@ Ctrl + Shift + Tab 打开上一个
 Command + Ctrl + F 全屏、退出全屏
 Command + + 放大
 Command + - 缩小
-Command + B 显示、隐藏侧边栏
+Command + B toggle侧边栏
 
 Ctrl + ` 显示终端
 Ctrl + Shift + ` 新建终端
+
+Shift + Command + E 打开文件管理
+Shift + Command + F 全局查找
+Shift + Command + X 打开 Extensions
+Shift + Control + G 打开 SourceControl
 ```
+
+
