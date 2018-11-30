@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /blogarchives/
+Sitemap: http://faichou.space/sitemap.xml
