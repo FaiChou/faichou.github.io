@@ -119,6 +119,7 @@ date: 2017-08-24
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": false,
     "breadcrumbs.enabled": false,
+    "editor.parameterHints.enabled": false, // disable pop-up parameter hints that show documentation and/or type information as you type
     "workbench.colorCustomizations": {
         "titleBar.activeBackground": "#B2B3B3",
         "titleBar.activeForeground":"#000000",
