@@ -40,33 +40,33 @@ date: 2017-08-24
 
 ```json
 {
-	"bootstrapped": true,
-	"in_process_packages":
-	[
-	],
-	"installed_packages":
-	[
-		"A File Icon",
-		"AutoFileName",
-		"Babel",
-		"Boxy Theme",
-		"Colorsublime",
-		"CSS3",
-		"Dracula Color Scheme",
-		"Emmet",
-		"ESLint",
-		"JSLint",
-		"Material Theme",
-		"Package Control",
-		"React ES6 Snippets",
-		"SublimeCodeIntel",
-		"SublimeLinter",
-		"SublimeLinter-jsxhint",
-		"SublimeLinter-pylint",
-		"Theme - Delta",
-		"TrailingSpaces",
-		"TypeScript"
-	]
+  "bootstrapped": true,
+  "in_process_packages":
+  [
+  ],
+  "installed_packages":
+  [
+    "A File Icon",
+    "AutoFileName",
+    "Babel",
+    "Boxy Theme",
+    "Colorsublime",
+    "CSS3",
+    "Dracula Color Scheme",
+    "Emmet",
+    "ESLint",
+    "JSLint",
+    "Material Theme",
+    "Package Control",
+    "React ES6 Snippets",
+    "SublimeCodeIntel",
+    "SublimeLinter",
+    "SublimeLinter-jsxhint",
+    "SublimeLinter-pylint",
+    "Theme - Delta",
+    "TrailingSpaces",
+    "TypeScript"
+  ]
 }
 ```
 
@@ -112,8 +112,6 @@ date: 2017-08-24
     "gitlens.showWhatsNewAfterUpgrades": false, // close annoying
     "javascript.suggest.autoImports": false, // close annoying
     "typescript.suggest.autoImports": false, // close annoying
-    "javascript.suggest.enabled": false, // close annoying
-    "typescript.suggest.enabled": false, // close annoying
     "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
     "workbench.statusBar.visible": true,
