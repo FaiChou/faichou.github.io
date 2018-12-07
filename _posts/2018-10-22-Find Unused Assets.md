@@ -16,14 +16,18 @@ date: 2018-10-22
 
 ## 找出资源文件
 
+最好将图片放到统一的文件夹下(`src/img`)
+
 ```bash
 $ find PROJECT_ROOT/src/img -type f > ~/Downloads/org
 ```
 
 ## 找出所有代码资源引用
 
+最好使用 `require` 代替图片 `import`
+
 ```bash
-$ find . -type f -name "*.ts" -or -name "*.tsx" -or -name "*.js" | xargs grep "require(" > ~/Downloads/key
+$ find . -type f -name "*.ts" -or -name "*.tsx" -or -name "*.js" -not -path "*node_modules*" | xargs grep "require(" > ~/Downloads/key
 ```
 
 - 代码有 ts, tsx 和 js
