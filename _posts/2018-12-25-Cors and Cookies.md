@@ -13,6 +13,7 @@ date: 2018-12-25
 ## 问题描述
 
 前端项目: reactjs, 使用 fetch 接口请求.
+
 后端接口: php5.6, 使用 session 来保存用户会话.
 
 跨域请求.
@@ -24,7 +25,7 @@ date: 2018-12-25
 1. `fetch` 设置 `credentials: 'include'`
 2. 服务器设置 `Access-Control-Allow-Credentials: true`
 3. 服务器设置 `Access-Control-Allow-Origin: http://localhost:3000`
-4. 怀疑过 cookie 过来时候就失效了, GMT ~
+4. 怀疑过 cookie 过来时候就失效(过期)了, GMT ~
 5. 在 safari / firefox / iPhone safari 里尝试
 
 ## 真正原因
