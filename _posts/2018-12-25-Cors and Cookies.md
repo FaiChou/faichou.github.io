@@ -37,7 +37,7 @@ date: 2018-12-25
 1. 浏览器第三方 cookie 政策
 2. Chrome Devtool 特(wen)性(ti)
 
-首先三方 cookie 政策导致的不能发送 cookie, 其次在 Chrome Devtools 中跨域的请求都会看不到 set-cookie 字段, 在 Safari 和 firefox 中是可以看到的, 并且在 Chrome Devtools 中跨域的请求也是看不全请求 header 的, 能发现有个: `Provisional headers are shown`.
+首先三方 cookie 政策导致的不能发送 cookie, 其次在 Chrome Devtools 中跨域的请求都会看不到 set-cookie 字段, 在 Safari 和 firefox 中是可以看到的, 并且在 Chrome Devtools 中跨域的请求 header 看到的也是不完整的, 会有个警告⚠️: `Provisional headers are shown`.
 
 > Provisional headers are shown 是 Chrome 的祖传 Bug，对于部分 HTTP2 的连接故意不显示，其实抓包你就发现挺正常的。
 
@@ -45,6 +45,12 @@ date: 2018-12-25
 
 > 在 devtool 中对某一次请求右键-copy-as cURL, 然后粘贴到 terminal 使用.
 
+---
+
+[Requests_with_credentials](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials):
+
+> **Third-party cookies**
+> Note that cookies set in CORS responses are subject to normal third-party cookie policies. In the example above, the page is loaded from foo.example, but the cookie on line 22 is sent by bar.other, and would thus not be saved if the user has configured their browser to reject all third-party cookies.
 
 
 ## 如何解决
