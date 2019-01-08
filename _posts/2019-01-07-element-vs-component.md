@@ -65,7 +65,7 @@ class Button extends React.Component {
 
 ```javascript
 const D = <div>d</div>;
-ReactDOM.render(<DD />, document.getElementById('root'));
+ReactDOM.render(<D />, document.getElementById('root'));
 ```
 
 会报错:
