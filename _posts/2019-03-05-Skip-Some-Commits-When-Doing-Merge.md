@@ -9,7 +9,7 @@ date: 2019-03-05
 
 ## Question
 
-How to skip some commits when doing merge? This situation is not a common one but is an interesting one. Look at the picture about if you don't understand the question.
+How to skip some commits when doing merge? This situation is not a common one but an interesting one. Look at the picture above if you don't understand the question.
 
 ## Solution 1 - cherry-pick
 
@@ -18,7 +18,7 @@ How to skip some commits when doing merge? This situation is not a common one bu
 [master]$ git cherry-pick 123475
 ```
 
-And then the tree like this:
+And then the tree is like this:
 
 ```
               474  475
@@ -53,7 +53,7 @@ p 123475
 [master]$ git commit -m "revert"
 ```
 
-Now the tree like this:
+Now the tree is like this:
 
 ```
       471 472 473 474 475
