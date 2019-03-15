@@ -22,6 +22,7 @@ date: 2018-06-04
 14. Dir
 15. Other
 16. Nerdtree
+17. OtherPlugins
 
 
 ## which vim
@@ -455,5 +456,20 @@ J: go to last child
 
 q: Close the NERDTree window
 A: Zoom (maximize-minimize)
+```
+
+## OtherPlugins
+
+```bash
+# rename.vim
+:rename abc.js
+
+# vim-mkdir
+:e a/b/c/d.js (where you open vim)
+
+# ctrlp
+<c-d> toggle file or path search
+<c-j>/<c-k>,<up>/<down>  switch
+<enter>/<c-t> open / open in tab
 ```
 
